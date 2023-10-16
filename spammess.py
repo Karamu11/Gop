@@ -39,6 +39,7 @@ ban = """
 \033[1;34m+-----------------------------------------------------------+
 """  
 os.system("clear")
+banner()
 ip=socket.gethostbyname(socket.gethostname())
 th='- - - - - - - - - - - - - - - - - - - - - - - - -'
 print(style.HEADER +('SPAM MESSENGER AOGAME '))
