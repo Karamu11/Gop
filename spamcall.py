@@ -3519,7 +3519,7 @@ def run(sdt,i):
   print(style.RED+"| SMS & CALL V3| STATUS: THÀNH CÔNG |",)  
   print(style.BLUE+'---------------------------------------')
   for j in range(0, 5):
-    print(f"Spamming",end="\r")
+    print(f"Spamming \r",end="")
     
 for i in range(1,count+1):
   run(sdt,i)
