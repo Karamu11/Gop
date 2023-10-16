@@ -38,8 +38,13 @@ ban = """
 \033[1;33m¦+ Facebook   : Nguyễn Thịnh                                                                
 \033[1;34m+-----------------------------------------------------------+
 """  
-os.system("clear")
-banner()
+def banner():
+  os.system("clear")
+  for h in ban:
+    sys.stdout.write(h)
+    sys.stdout.flush()
+    time.sleep(0.0003)   
+banner() 
 ip=socket.gethostbyname(socket.gethostname())
 th='- - - - - - - - - - - - - - - - - - - - - - - - -'
 print(style.HEADER +('SPAM MESSENGER AOGAME '))
