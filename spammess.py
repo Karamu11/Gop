@@ -37,8 +37,7 @@ ban = """
 \033[1;31m¦+ Version  : V4                                                                           
 \033[1;33m¦+ Facebook   : Nguyễn Thịnh                                                                
 \033[1;34m+-----------------------------------------------------------+
-"""
-def banner():    
+"""  
 os.system("clear")
 ip=socket.gethostbyname(socket.gethostname())
 th='- - - - - - - - - - - - - - - - - - - - - - - - -'
