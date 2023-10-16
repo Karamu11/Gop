@@ -1,3 +1,6 @@
+import os
+import requests,os,time,re,json,uuid,random,sys
+from concurrent.futures import ThreadPoolExecutor
 import requests
 from datetime import datetime
 import socket
@@ -36,29 +39,36 @@ import uuid, re
 from pystyle import Write,Colors
 import socket
 from datetime import datetime
-
-class style():
-    BLACK = '\033[30m'
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    YELLOW = '\033[33m'
-    BLUE = '\033[34m'
-    MAGENTA = '\033[35m'
-    CYAN = '\033[36m'
-    WHITE = '\033[37m'
-    UNDERLINE = '\033[4m'
-    RESET = '\033[0m'
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = "\033[1m"
-    TAU = "\U0001f680"
-
+luc = "\033[1;32m"
+trang = "\033[1;37m"
+do = "\033[1;31m"
+xnhac = "\033[1;36m"
+#today nand clear
+def get_ip_info(ip_addr, api_key):
+    url = f"http://api.ipstack.com/{ip_addr}?access_key={api_key}"
+    response = requests.get(url)
+    data = response.json()
+    return data
+import datetime
+def raofficialvirus080():
+    ip_address = requests.get('https://api.ipify.org').text
+    YOUR_API_KEY = "f8f7016e2d0d474c6f68ad42ce4db926"
+    ip_info = get_ip_info(ip_address, YOUR_API_KEY)
+    print(f"\033[34mĐịa Chỉ IP:\033[32m {ip_address}")
+now = datetime.datetime.now()
+formatted_date = now.strftime("%d/%m/%Y %H:%M:%S")
+os.system('cls')
+data_machine = []
+today = date.today()
+os.system('clear')
+#daystime
+thu = now.strftime("%A")
+ngay_hom_nay = now.strftime("%d")
+thang_nay = now.strftime("%m")
+nam_ = now.strftime("%Y")
+raofficialvirus = trang + " " + trang + "[" + do + "÷_+" + trang + "] " + trang + "=> "
 ban = """
-\033[1;34m+-----------------------------------------------------------+
+\033[1;34m╔═══════════════════════════════════════════════════════════╗
   _______ _    _ _____ _   _ _    _ 
  |__   __| |  | |_   _| \ | | |  | |
     | |  | |__| | | | |  \| | |__| |
@@ -66,20 +76,159 @@ ban = """
     | |  | |  | |_| |_| |\  | |  | |
     |_|  |_|  |_|_____|_| \_|_|  |_| 
 
-\033[1;34m¦-----------------------------------------------------------¦
-\033[1;32m¦+ Author   : Thinh Dz                                                                              
-\033[1;36m¦+ Tiktok  : Dell share                    
-\033[1;31m¦+ Version  : V4                                                                            
-\033[1;33m¦+ Facebook   : Nguyễn Thịnh                                                                
-\033[1;34m+-----------------------------------------------------------+
+\033[1;34m╠═══════════════════════════════════════════════════════════╣
+\033[1;32m║➢ Author   : Thinh Dz                                                         
+\033[1;36m║➢ Tiktok  :                     
+\033[1;31m║➣ Version  : V4                                                                            
+\033[1;33m║➣ Facebook   : Nguyễn Thịnh                                                                
+\033[1;34m╚═══════════════════════════════════════════════════════════╝
+  Lưu Ý:
+  • Động não trước khi sử dụng!!
+  • Để dừng tấn công bấm [ CTRL + z ]
+  • Khi chạy tool máy sẽ có cảm giác lag !!!
+  • Thắc mắc hoặc cần hỗ trợ liên hệ : Thinh Dz
+\033[1;31m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 """
+
 def banner():
   os.system("clear")
   for h in ban:
     sys.stdout.write(h)
     sys.stdout.flush()
     time.sleep(0.0003)   
-banner() 
+banner()
+print("\033[37m[ \033[31m1\033[37m ]\033[33m Key Tool Free (Mỗi Ngày)")
+print("\033[37m[ \033[31m2\033[37m ]\033[33m Key Tool Vip ")
+choice = input("\033[33m[\033[32mADMIN\033[33m] \033[32mLựa Chọn Vào Key Là:\033[33m ")
+if choice == "1":
+    banner()
+    a=now.strftime("%d")
+    h=int(now.strftime("%d"))
+    ngay_trc=h-2
+    b=now.strftime("%m")
+    day=now.strftime("%d-%m-%Y")
+    today=now.strftime("%d-%m-%Y")
+    d=now.strftime("%d-%m")
+    ngay=int(strftime('%d'))
+    encodedBytes = base64.b64encode(d.encode("utf-8"))
+    key = str(encodedBytes, "utf-8")
+    key1=str(ngay*12345+192909)
+    key = 'AOGAME_'+key1
+    keyv1 = '.....'
+    hentai=(f"https://aogamekia.000webhostapp.com/key.html?key={key}")
+    api_token='697595b5-b7e5-460c-b0b2-aed423d11c7f'
+    url=requests.get(f'https://web1s.com/api?token={api_token}&url={hentai}').json()
+    status=url['status']
+    link=url['shortenedUrl']
+    file_key=f'key_ngay{ngay_hom_nay}.txt'
+    file_key_cu=f'key_ngay{ngay_trc}.txt'
+    check_file_key=os.path.exists(file_key)
+    if check_file_key == False:
+       print(f"{raofficialvirus}{luc}Do Đây Là Tool Share Free Nên Key Sẽ Thay Đổi Mỗi Ngày !!")
+       print(f'{raofficialvirus}{luc}Truy Cập Vào Link{trang}: {link} {luc}Để Lấy Key Miễn Phí')
+       print(f'{trang}-----------------------------------------------------------------')
+       print(f'\033[1;36m╔════════════════════════╗')
+       print(f'\033[1;36m║\033[1;33mNhập Key Ngày \033[1;37m{today}\033[1;36m║')
+       print (f"\033[1;36m║════════════════════════╝")
+       while(True):
+          ma=input(f"{xnhac}╚══════➩ \033[1;33m")
+          if ma == key:
+             print(f'{raofficialvirus}{luc}API Key Chính Xác')
+             os.system("cls" if os.name == "nt" else "clear")
+         
+             luu=open(file_key, 'a+')
+             luu.write(ma)
+             luu.close()
+             break
+          elif ma != key:
+             print(f'{raofficialvirus}{do}API Key Sai')
+    elif check_file_key == True:
+        print(f'{raofficialvirus}{luc}Đang Lấy Key...',end='\r')
+        sleep(1)
+        k=open(file_key, 'r')
+        ma=k.read()
+        k.close()
+        if ma == key:
+            print(f'{raofficialvirus}{luc}Lấy Key Thành Công       ',end='\r')
+            sleep(0.5)
+        elif ma != key:
+            if os.path.exists(file_key_cu) == True:
+                os.system(f'rm {file_key_cu}')
+            os.system(f'rm {file_key}')
+            print(f'{raofficialvirus}{do}API Key Sai         ')
+            while(True):
+                ma=input(f"{raofficialvirus}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
+                if ma == key:
+                    print(f'{raofficialvirus}{luc}API Key Chính Xác')
+                    os.system("cls" if os.name == "nt" else "clear")
+               
+                    luu=open(file_key, 'a+')
+                    luu.write(ma)
+                    luu.close()
+                    break
+                elif ma != key:
+                    print(f'{raofficialvirus}{do}API Key Sai           ')
+                    exit()
+if choice == "2":
+    banner()
+    a=now.strftime("%d")
+    h=int(now.strftime("%d"))
+    ngay_trc=h-2
+    b=now.strftime("%m")
+    day=now.strftime("%d-%m-%Y")
+    today=now.strftime("%d-%m-%Y")
+    d=now.strftime("%d-%m")
+    ngay=int(strftime('%d'))
+    key ='A'
+    file_key=f'key_ngay{ngay_hom_nay}.txt'
+    file_key_cu=f'key_ngay{ngay_trc}.txt'
+    check_file_key=os.path.exists(file_key)
+    if check_file_key == False:
+       print(f'{trang}-----------------------------------------------------------------')
+       print(f'\033[1;36m╔════════════════════════╗')
+       print(f'\033[1;36m║\033[1;33mNhập Key Vipp \033[1;37m{today}\033[1;36m║')
+       print (f"\033[1;36m║════════════════════════╝")
+       while(True):
+          ma=input(f"{xnhac}╚══════➩ \033[1;33m")
+          if ma == key:
+             print(f'{raofficialvirus}{luc}API Key Chính Xác')
+             os.system("cls" if os.name == "nt" else "clear")
+         
+             luu=open(file_key, 'a+')
+             luu.write(ma)
+             luu.close()
+             break
+          elif ma != key:
+             print(f'{raofficialvirus}{do}API Key Sai')
+    elif check_file_key == True:
+        print(f'{raofficialvirus}{luc}Đang Lấy Key...',end='\r')
+        sleep(1)
+        k=open(file_key, 'r')
+        ma=k.read()
+        k.close()
+        if ma == key:
+            print(f'{raofficialvirus}{luc}Lấy Key Thành Công       ',end='\r')
+            sleep(0.5)
+        elif ma != key:
+            if os.path.exists(file_key_cu) == True:
+                os.system(f'rm {file_key_cu}')
+            os.system(f'rm {file_key}')
+            print(f'{raofficialvirus}{do}API Key Sai         ')
+            while(True):
+                ma=input(f"{raofficialvirus}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
+                if ma == key:
+                    print(f'{raofficialvirus}{luc}API Key Chính Xác')
+                    os.system("cls" if os.name == "nt" else "clear")
+               
+                    luu=open(file_key, 'a+')
+                    luu.write(ma)
+                    luu.close()
+                    break
+                elif ma != key:
+                    print(f'{raofficialvirus}{do}API Key Sai           ')
+                    exit()
+banner()
 raofficialvirus080()
 amount = 5000
 sdt = input("[ + ] Nhập Số Điện Thoại Bỏ Vô Đây: ")
@@ -91,7 +240,7 @@ if sdt == "0826363378":
   print("SPAM CÁI LỒN ĐỊT MẸ MÀY À SPAM LỘN NGƯỜI RỒI ")
   exit()
 
-threading = 5000
+threading = ThreadPoolExecutor(max_workers=int(100000))  
 def vayvnd(sdt):
   data = '{"phone":"sdt","utm":[{"utm_source":"google","utm_medium":"organic","referrer":"https://www.google.com/"}],"sourceSite":3}'.replace("sdt",sdt)
   head = {
